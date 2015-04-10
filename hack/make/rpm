@@ -115,7 +115,8 @@ EOF
 			--prefix / \
 			--depends iptables \
 			--depends xz \
-			--depends device-mapper-libs \
+			--depends "systemd >= 208-20" \
+			--depends "device-mapper-libs >= 7:1.02.90-1" \
 			--depends libselinux \
 			--depends libsepol \
 			--depends sqlite \
