@@ -184,18 +184,6 @@ EOF
 			--config-files etc/udev/rules.d/80-docker.rules \
 			--rpm-compression gzip \
 			-t rpm .
-#		# TODO replace "Suggests: cgroup-lite" with "Recommends: cgroupfs-mount | cgroup-lite" once cgroupfs-mount is available
-
-		fpm -s empty \
-			--name lxc-docker --version "$PKGVERSION" \
-			--architecture "$PACKAGE_ARCHITECTURE" \
-			--depends lxc-docker-$VERSION \
-			--description "$PACKAGE_DESCRIPTION" \
-			--maintainer "$PACKAGE_MAINTAINER" \
-			--url "$PACKAGE_URL" \
-			--license "$PACKAGE_LICENSE" \
-			--rpm-compression gzip \
-			-t rpm
 	)
 
 	# clean up after ourselves so we have a clean output directory
