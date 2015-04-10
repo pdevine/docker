@@ -155,6 +155,7 @@ EOF
 		# create lxc-docker-VERSION package
 		fpm -s dir -C $DIR \
 			--name lxc-docker-$VERSION --version "$PKGVERSION" \
+			--epoch 7 \
 			--before-install $DEST/preinst \
 			--after-install $DEST/postinst \
 			--before-remove $DEST/prerm \
